@@ -1,63 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Login V3</title>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<style type="text/css">
-    ._pl-container{
-    padding: 0;
-    margin-bottom: 10px;
-    width: 100%;
-    }
-    ._pl-list li{
-    font-weight: bold;
-    font-weight: bold;
-    width: 100%;
-    }
-    ._pl-container small{
-    opacity: 0.6;
-    font-size: 12px;
-    float: right;
-    }
-    ._pl-title{
-    margin-bottom: 15px;
-    }
-    ._pl-container.amazon h3._pl-title{
-    font-size: 14px;
-    color:#c66d42;
-    }
-    ._pl-container.m186301 h3._pl-title{
-    font-size: 16px;
-    color:#ff3636;
-    font-weight: bold;
-    }
-    ._pl-container.m0{
-    padding: 20px;
-    }
-    ._pl-gallery{
-    width: 100%;
-    text-align: center;
-    }
-    ._pl-gallery a img{
-    width: 60px;
-    }
-    ._pl-gallery.m186301{
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    }
-    ._pl-gallery.m-1{
-    position: absolute;
-    top: 0;
-    }
-    ._pl-gallery.laredoute img{
-    border: 3px solid #fff;
-    }
-    </style>
+    <link rel="stylesheet" href="api.css">
 </head>
 <body>
 
+<h2> Bienvenue veillez vous connecter</h2>
+
+<!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>-->
+
+<div id="id01"> <!-- class="modal"> -->
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <!--<div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>-->
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <div class= " container-btn">
+                <button class = "design">Login</button>
+                <span class="psw"> <a href="#">Sign up</a></span>
+            </div>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <!--<div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div> -->
+    </form>
+</div>
+<!--<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>-->
+
 </body>
 </html>
+
