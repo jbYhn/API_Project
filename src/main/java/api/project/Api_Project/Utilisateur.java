@@ -56,5 +56,4 @@ public class Utilisateur {
         return login;
     }
 
-
 }
