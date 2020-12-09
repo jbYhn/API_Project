@@ -1,59 +1,33 @@
 package api.project.Api_Project;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "Utilisateur")
+@Table(name = "utilisateur")
 @EntityListeners(AuditingEntityListener.class)
-
-
 public class Utilisateur {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
+    private int id;
+
+    @Column(name = "login", nullable = false)
+    private String login;
 
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column (name  = "email", nullable = false)
+    @Column(name = "email", nullable = false)
     private String email ;
 
-    @Column( name = "login",  nullable = false)
-    private String login;
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getLogin() {
-        return login;
-    }
 
 }
