@@ -1,4 +1,158 @@
-.limiter {
+body {font-family: Arial, Helvetica, sans-serif;}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+input[type=text], input[type=password] {
+    outline: none;
+    border: none;
+}
+/* Set a style for all buttons */
+button {
+outline: none!important;
+border: none;
+}
+
+.design {
+font-family: Poppins-Medium;
+font-size: 16px;
+color: #555;
+line-height: 1.2;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0 20px;
+min-width: 120px;
+height: 50px;
+border-radius: 25px;
+position: relative;
+z-index: 1;
+transition: all .4s;
+}
+
+.design::before {
+content: "";
+display: block;
+position: absolute;
+z-index: -1;
+width: 100%;
+height: 100%;
+border-radius: 25px;
+background-color: #fff;
+top: 0;
+left: 0;
+opacity: 1;
+transition: all .4s;
+}
+
+.container-btn {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+button:hover {
+opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+    text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    width: 500px;
+    margin: 5% auto 15% auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px 55px 37px;
+    background: -webkit-linear-gradient(top,#7579ff,#b224ef4d);
+}
+
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.wrap-input100 {
     width: 100%;
-    margin: 0 auto;
+    position: relative;
+    border-bottom: 2px solid rgba(255,255,255,.24);
+    margin-bottom: 30px;
+}
+
+.input100 {
+    font-family: Poppins-Regular;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: 0 0;
+    padding: 0 5px 0 38px;
+}
+
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all .4s;
+    background: #fff;
+}
+.focus-input100::after {
+    font-family: Material-Design-Iconic-Font;
+    font-size: 22px;
+    color: #fff;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    padding-left: 5px;
+    transition: all .4s;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
 }
