@@ -17,20 +17,23 @@ public class Utilisateur {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
-    private int id;
+    public int id;
 
     @Column(name = "pasword", nullable = false)
-    private String password;
+    public String pasword;
 
     @Column(name = "name", nullable = false)
-    private String name;
+    public String name;
 
     @Column(name = "email", nullable = false)
-    private String email ;
+    public String email;
 
     @GeneratedValue()
     @Column(name = "token", nullable = false)
-    private String token;
+    public String token;
 
+    public void setToken(String token) {
+        this.token = token;
+    }
 
 }

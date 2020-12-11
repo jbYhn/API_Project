@@ -36,8 +36,6 @@ public class UtilisateurService {
         return "user removed !! " + id;
     }
 
-
-
     public Utilisateur updateUser(Utilisateur user) {
         Utilisateur theUser = repository.findById(user.getId()).orElse(null);
         theUser.setName(user.getName());
