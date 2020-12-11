@@ -1,4 +1,4 @@
-package api.project.Api_Project;
+package api.project.UserAPI;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,8 +19,8 @@ public class Utilisateur {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
     private int id;
 
-    @Column(name = "login", nullable = false)
-    private String login;
+    @Column(name = "pasword", nullable = false)
+    private String password;
 
     @Column(name = "name", nullable = false)
     private String name;
@@ -28,6 +28,9 @@ public class Utilisateur {
     @Column(name = "email", nullable = false)
     private String email ;
 
+    @GeneratedValue()
+    @Column(name = "token", nullable = false)
+    private String token;
 
 
 }
