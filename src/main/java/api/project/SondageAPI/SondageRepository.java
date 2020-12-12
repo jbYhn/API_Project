@@ -3,5 +3,5 @@ package api.project.SondageAPI;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SondageRepository extends JpaRepository<Sondage, Integer> {
-    Sondage findSondageByDescription(String description);
+    // Sondage findSondageByDescription(int id);
 }

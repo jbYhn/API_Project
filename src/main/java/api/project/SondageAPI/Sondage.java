@@ -16,11 +16,15 @@ import javax.persistence.*;
 public class Sondage {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
-    private int id;
+    public int id;
+
+    @Column(name = "user_id", nullable = false)
+    public int user_id;
 
     @Column(name = "description", nullable = false)
-    private String description;
+    public String description;
 
-    @Column(name = "reponse", table = "reponse", nullable = false)
-    private String reponses;
+    @Column(name = "lieu", nullable = false)
+    public String lieu;
+
 }
