@@ -1,3 +1,5 @@
+create database
+
 create table if not EXISTS utilisateur (
     id int not null  AUTO_INCREMENT,
     name varchar(255) not null,

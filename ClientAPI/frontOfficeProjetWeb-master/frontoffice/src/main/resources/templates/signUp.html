@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" th:href="@{/auth.css}"/>
+    
+</head>
+<body>
+
+<div id="id01"> <!-- class="modal"> -->
+
+    <form class="modal-content animate" action="/signUp" method="POST">  
+        <h1> SIGN UP</h1>
+        <div class="wrap-input100 " data-validate="Enter username">
+            <input class="input100" type="text" name="name" placeholder="Username">
+            <span class="focus-input100" >
+            </span>
+        </div>
+        <div class="wrap-input100 " data-validate="Enter email">
+            <input class="input100" type="text" name="email" placeholder="Email">
+            <span class="focus-input100" >
+            </span>
+        </div>
+        <div class="wrap-input100" data-validate="Enter password">
+            <input class="input100" type="password" name="pasword" placeholder="Password">
+            <span class="focus-input100" data-placeholder=""></span>
+        </div>
+        <div class="wrap-input100" data-validate="Enter password">
+            <input class="input100" type="password" name="pasword2" placeholder=" Repeat Password">
+            <span class="focus-input100" data-placeholder=""></span>
+        </div>
+
+        <div class="container">
+            <div class= " container-btn">
+                <button class = "design">Login</button>
+            </div>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="survey.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Sondage</h1>
+      <p id="description" class="description text-center">
+       Merci de bien vouloir répondre au sondage suivant
+      </p>
+    </header>
+   
+    <div class="main" id="survey-form">
+
+      <div class="form-group">
+        <div class="text-center">
+          <h1>Liste des sondages</h1>
+          <ul id="sondages">
+            
+          </ul>
+      </div>
+       
+      </div>
+  
+      
+  
+     
+    </div>
+  </div>
+    <script>
+     fetch("http://localhost:9191/surveys", {}).then(data=>data.json()).then(res=>{   
+      if(res){
+        resParse = Array.from(res)
+        resParse.forEach(el => {
+          let li = document.createElement("li");
+          
+          let text = `<a href="/survey?id=${el.id}" >Rendez vous à <span id="lieu">${el.lieu} </span>  pour <span>${el.description}</span>...</a>`
+          li.innerHTML= text
+        
+          document.getElementById("sondages").appendChild(li)
+        });
+      }
+    
+    })
+    </script>
+</body>
+</html>
+

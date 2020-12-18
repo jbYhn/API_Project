@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" th:href="@{/survey.css}"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Sondage - Numero 1</h1>
+      <p id="description" class="description text-center">
+       Merci de bien vouloir répondre au sondage suivant
+      </p>
+    </header>
+    <form id="survey-form">
+
+      <div class="form-group">
+        <p>
+          Rendez vous pour la réunion web.
+          <span class="precision">(Choississez une ou plusieur propositions)</span>
+        </p>
+  
+        <label
+          ><input
+            name="prefer"
+            value="10:50"
+            type="checkbox"
+            class="input-checkbox"
+          />10:50</label
+        >
+        <label
+        ><input
+          name="prefer"
+          value="12:50"
+          type="checkbox"
+          class="input-checkbox"
+        />12:50</label
+      >
+      <label
+      ><input
+        name="prefer"
+        value="18:50"
+        type="checkbox"
+        class="input-checkbox"
+      />18:50</label
+    >
+       
+      </div>
+  
+      
+  
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Envoyer
+        </button>
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>
+
