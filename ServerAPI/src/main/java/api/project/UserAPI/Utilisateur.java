@@ -20,17 +20,17 @@ public class Utilisateur {
     public int id;
 
     @Column(name = "pasword", nullable = false)
-    public String pasword;
+    private String pasword;
 
     @Column(name = "name", nullable = false)
-    public String name;
+    private String name;
 
     @Column(name = "email", nullable = false)
-    public String email;
+    private String email;
 
     @GeneratedValue()
     @Column(name = "token", nullable = false)
-    public String token;
+    private String token;
 
     public void setToken(String token) {
         this.token = token;

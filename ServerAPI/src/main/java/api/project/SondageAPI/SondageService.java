@@ -35,7 +35,9 @@ public class SondageService {
     public Sondage updateSondage(Sondage survey) {
         Sondage theSurvey = sondageRepository.findById(survey.getId()).orElse(null);
         theSurvey.setDescription(survey.getDescription());
-        theSurvey.setReponses(survey.getReponses());
+        theSurvey.setLieu(survey.getLieu());
+        theSurvey.setId(survey.getId());
+        theSurvey.setUser_id(survey.getUser_id());
         return sondageRepository.save(theSurvey);
     }
 }

@@ -39,7 +39,7 @@ public class UtilisateurService {
     public Utilisateur updateUser(Utilisateur user) {
         Utilisateur theUser = repository.findById(user.getId()).orElse(null);
         theUser.setName(user.getName());
-        theUser.setPassword(user.getPassword());
+        theUser.setPasword(user.getPasword());
         theUser.setEmail(user.getEmail());
         return repository.save(theUser);
     }

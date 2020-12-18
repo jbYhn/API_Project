@@ -18,14 +18,14 @@ public class UtilisateurController {
 
     @PostMapping("/addUser")
     public Map<String, String> addUser(@RequestBody Utilisateur user) {
-        System.out.println("======================" + user.email);
+        System.out.println("======================" + user.getEmail());
         UUID uuid = UUID.randomUUID();
         user.setToken(uuid.toString());
         service.saveUser(user);
 
         HashMap<String, String> map = new HashMap<>();
 
-        map.put("token", user.token);
+        map.put("token", user.getToken());
         map.put("id", user.id + "");
 
         return map;
