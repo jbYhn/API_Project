@@ -1,4 +1,4 @@
-create database
+create database Survey;
 
 create table if not EXISTS utilisateur (
     id int not null  AUTO_INCREMENT,
