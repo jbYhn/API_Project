@@ -40,10 +40,10 @@ public class SignUpController {
                 return "redirect:/home";
             }
         } catch (Exception e) {
-            return "signup";
+            return "signUp";
         }
 
-        return "signup";
+        return "signUp";
     }
 
     public String paramJson(String paramIn) {
