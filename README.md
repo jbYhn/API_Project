@@ -19,4 +19,4 @@ Lancer le script api.sql pour créer la base de données
 
 4. Run les deux fichiers
 - Run ApiProjectApplication pour le server
-- Run FrontOffice pour le Client
+- Run FrontOfficeApplication pour le Client
