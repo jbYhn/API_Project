@@ -5,3 +5,18 @@ Ce projet est divisé en deux parties
 de la liste
 
 Le projet a une partie front qui comporte toutes pages ( La page de connexion ) 
+
+
+Etapes 
+
+1. Clone l'application 
+
+
+2. Créer la base données
+Lancer le script api.sql pour créer la base de données
+
+3. Connecte la base de données à ton projet sur Intellij
+
+4. Run les deux fichiers
+- Run ApiProjectApplication pour le server
+- Run FrontOffice pour le Client
